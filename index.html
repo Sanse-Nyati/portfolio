@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew Junior Afande | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1 class="logo">AJ AFANDE</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2 id="typing-text"></h2>
+      <p class="tagline">Web Developer | Designer | Tech Enthusiast</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Hire Me</a>
+        <a href="#portfolio" class="btn-outline">My Work</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/san.andr3w/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/254116128538"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/IMG20250903155634.jpg" alt="Andrew Junior Afande">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section container" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          Hi! I'm <span class="highlight">Andrew Junior Afande</span>, a passionate Web Developer
+          skilled in building modern, fast, and responsive websites.
+        </p>
+        <p>
+          I love turning ideas into reality using clean code and creative designs.
+        </p>
+        <a href="Cardi B - Drip feat. Migos [Official Audio](MP3_128K).mp3" download class="download-btn">Download CV</a>
+
+      </div>
+
+      <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill"><span>HTML & CSS</span><div class="progress"><div></div></div></div>
+        <div class="skill"><span>JavaScript</span><div class="progress"><div></div></div></div>
+        <div class="skill"><span>React</span><div class="progress"><div></div></div></div>
+        <div class="skill"><span>Node.js</span><div class="progress"><div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section container" id="services">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Responsive and high-performance websites with clean code.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-paint-brush"></i>
+        <h3>UI/UX Design</h3>
+        <p>Creative and user-friendly interfaces for an engaging experience.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-search"></i>
+        <h3>SEO Optimization</h3>
+        <p>Boost your online presence and ranking with optimized websites.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section container" id="portfolio">
+    <h2>My Work</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card"><img src="assets/1600w-lU0JB64VYys.webp" alt="Project 1"><div class="overlay">Project 1</div></div>
+      <div class="portfolio-card"><img src="assets/technology-logo-icon-symbol-design-for-data-processing-networking-and-technical-business-vector.jpg" alt="Project 2"><div class="overlay">Project 2</div></div>
+      <div class="portfolio-card"><img src="assets/sap-cybersecurity.jpeg" alt="Project 3"><div class="overlay">Project 3</div></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+  <h2>Contact Me</h2>
+  <form class="contact-form" id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Andrew Junior Afande. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("EoMtjjXC-qNPEn3kQ");
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_3kjibgp', 'template_buluigh', this)
+      .then(function() {
+        alert('✅ Message sent successfully!');
+        document.getElementById('contact-form').reset(); // ✅ Clear fields
+      }, function(error) {
+        alert('❌ Failed to send message: ' + JSON.stringify(error));
+      });
+  });
+</script>
+
+</body>
+</html>
+
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("EoMtjjXC-qNPEn3kQ");
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_3kjibgp', 'template_buluigh', this)
+      .then(function() {
+        alert('✅ Message sent successfully!');
+        document.getElementById('contact-form').reset(); // ✅ Clear fields
+      }, function(error) {
+        alert('❌ Failed to send message: ' + JSON.stringify(error));
+      });
+  });
+</script>
